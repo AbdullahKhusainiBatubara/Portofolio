@@ -870,4 +870,46 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
   }
+  /* ===== TAMBAHKAN DI BAGIAN PALING BAWAH style.css ===== */
+
+/* Skill meta row (level % + badge) */
+.skill-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+}
+
+/* Skill level badge */
+.skill-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Mahir (≥ 80%) — cyan/primary */
+.skill-badge.skill-mahir {
+  background: linear-gradient(90deg, var(--primary-color), #00bcd4);
+  color: var(--dark-bg);
+}
+
+/* Menengah (50%) — blue */
+.skill-badge.skill-menengah {
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  color: #ffffff;
+}
+
+/* Dasar (< 50%) — amber/orange */
+.skill-badge.skill-dasar {
+  background: linear-gradient(90deg, #f59e0b, #ef4444);
+  color: #ffffff;
+}
+
+/* Progress bar warna kuning untuk skill < 50% */
+.skill-card[data-level="dasar"] .progress {
+  background: linear-gradient(90deg, #f59e0b, #ef4444);
+}
 }
